@@ -5,16 +5,16 @@ import sys
 def process(path_file, instance):
     lines = txt_importer(path_file)
 
-    if len(instance.data) > 0:
-        for elements in instance.data:
-            if elements["nome_do_arquivo"] == path_file:
-                return None
-
     value = {
         "nome_do_arquivo": path_file,
         "qtd_linhas": len(lines),
         "linhas_do_arquivo": lines,
     }
+
+    if len(instance.data) > 0:
+        for elements in instance.data:
+            if elements["nome_do_arquivo"] == path_file:
+                return None
 
     instance.enqueue(value)
     print(value)

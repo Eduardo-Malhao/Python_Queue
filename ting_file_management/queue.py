@@ -3,7 +3,7 @@ from ting_file_management.abstract_queue import AbstractQueue
 
 class Queue(AbstractQueue):
     def __init__(self):
-        self.queue = list()
+        self.data = list()
 
     def __len__(self):
         return len(self.data)
