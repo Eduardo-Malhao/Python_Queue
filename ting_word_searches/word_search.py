@@ -5,7 +5,8 @@ def exists_word(word, instance):
             response = {
                 "palavra": word,
                 "arquivo": item["nome_do_arquivo"],
-                "ocorências": len(search_by_word(word, instance["linhas_do_arquivo"])),
+                "ocorências": len(search_by_word(
+                    word, instance["linhas_do_arquivo"])),
             }
     return response
 
@@ -28,4 +29,3 @@ def search_by_word(word, instance):
                 }
             )
     return array
-
