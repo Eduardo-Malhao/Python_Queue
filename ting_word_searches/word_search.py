@@ -1,5 +1,5 @@
 def exists_word(word, instance):
-    for item in instance.data:
+    for item in instance.queue:
         found = search_by_word(word, instance["linhas_do_arquivo"])
         if found == word:
             response = {
